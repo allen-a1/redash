@@ -13,8 +13,8 @@ export default function init(ngModule) {
       $scope.destinationsPage = startsWith($location.path(), '/destinations');
       $scope.snippetsPage = startsWith($location.path(), '/query_snippets');
 
-      $scope.showGroupsLink = currentUser.hasPermission('list_users');
-      $scope.showUsersLink = currentUser.hasPermission('list_users');
+      $scope.showGroupsLink = currentUser.hasPermission('admin');
+      $scope.showUsersLink = currentUser.hasPermission('admin');
       $scope.showDsLink = currentUser.hasPermission('admin');
       $scope.showDestinationsLink = currentUser.hasPermission('admin');
       $scope.showQuerySnippetsLink = currentUser.hasPermission('create_query');
